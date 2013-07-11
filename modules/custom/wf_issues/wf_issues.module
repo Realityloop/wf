@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the wf feature.
+ */
+
+include_once 'wf_issues.features.inc';

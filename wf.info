@@ -1,0 +1,7 @@
+name = wf
+description = Installation profile for wf.
+core = 7.x
+
+; Dependencies
+dependencies[] = features
+dependencies[] = wf

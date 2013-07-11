@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the wf install profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function wf_install() {
+  features_get_components(NULL, NULL, TRUE);
+  features_include_defaults(NULL, TRUE);
+  features_revert();
+}
