@@ -67,11 +67,11 @@ projects[wysiwyg_fields][download][revision] = 75b4364922081d90cf2de6172936eafbf
 
 
 ; Libraries
-; libraries[ckeditor][download][type] = get
-; libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor 4.0/ckeditor_4.0_full.tar.gz
+libraries[ckeditor][download][type] = get
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor 4.0/ckeditor_4.0_full.tar.gz
 
-; libraries[famfamfam_silk_icons][download][type] = file
-; libraries[famfamfam_silk_icons][download][url] = http://www.famfamfam.com/lab/icons/silk/famfamfam_silk_icons_v013.zip
+libraries[famfamfam_silk_icons][download][type] = file
+libraries[famfamfam_silk_icons][download][url] = http://www.famfamfam.com/lab/icons/silk/famfamfam_silk_icons_v013.zip
 
 libraries[profiler][download][type] = git
 libraries[profiler][download][url] = http://git.drupal.org/project/profiler.git
