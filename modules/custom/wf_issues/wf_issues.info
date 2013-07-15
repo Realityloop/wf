@@ -7,6 +7,7 @@ version = 7.x-1.0
 project = wf_issues
 dependencies[] = admin_menu
 dependencies[] = ctools
+dependencies[] = devel
 dependencies[] = diff
 dependencies[] = entity
 dependencies[] = features

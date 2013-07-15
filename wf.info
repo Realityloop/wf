@@ -2,6 +2,134 @@ name = wf
 description = Installation profile for wf.
 core = 7.x
 
+
+
 ; Dependencies
+
 dependencies[] = features
-dependencies[] = wf
+dependencies[] = wf_issues
+
+
+
+; Files
+
+files[1][uri] = https://drupal.org/files/druplicon.small_.png
+files[1][destination] = public://druplicon.png
+files[1][uid] = 1
+
+files[2][uri] = https://drupal.org/files/druplicon.small_.png
+files[2][destination] = public://druplicon_0.png
+files[2][uid] = 1
+
+files[3][uri] = https://drupal.org/files/druplicon.small_.png
+files[3][destination] = public://druplicon_1.png
+files[3][uid] = 1
+
+
+; Nodes
+
+nodes[1][type] = file_page
+nodes[1][title] = File br in empty list item
+nodes[1][uid] = 1
+nodes[1][language] = und
+nodes[1][promote] = 1
+nodes[1][body][und][0][value] = <p>Some text followed by</p><ul><li>[wysiwyg_field contenteditable="false" wf_deltas="0" wf_field="field_file" wf_formatter="file_default" wf_cache="1373414188" wf_entity_id="1" wf_entity_type="node"]</li><li><br />[wysiwyg_field contenteditable="false" wf_deltas="0" wf_field="field_file" wf_formatter="file_default" wf_cache="1373414188" wf_entity_id="1" wf_entity_type="node"]</li><li>text</li></ul><p>In this example the wf item in the 3rd list item was added without adding a non breaking space inside the list item first, in this case a &lt;br&gt; tag gets inserted in front of it for some reason.</p>
+nodes[1][body][und][0][format] = wysiwyg_file
+nodes[1][field_file][und][0][fid] = 1
+nodes[1][field_file][und][0][display] = 1
+
+nodes[2][type] = media_page
+nodes[2][title] = Media br in empty list item
+nodes[2][uid] = 1
+nodes[2][language] = und
+nodes[2][promote] = 1
+nodes[2][body][und][0][value] = <p>Some introductory text, followed by a list with media items in it</p><ul><li>[wysiwyg_field contenteditable="false" wf_deltas="0" wf_field="field_media" wf_formatter="file_default" wf_cache="1373414206" wf_entity_id="2" wf_entity_type="node"]</li><li>[wysiwyg_field contenteditable="false" wf_deltas="1" wf_field="field_media" wf_formatter="file_default" wf_cache="1373414206" wf_entity_id="2" wf_entity_type="node"]</li><li><br />[wysiwyg_field contenteditable="false" wf_deltas="2" wf_field="field_media" wf_formatter="file_default" wf_cache="1373414206" wf_entity_id="2" wf_entity_type="node"]</li><li>[wysiwyg_field contenteditable="false" wf_deltas="3" wf_field="field_media" wf_formatter="file_default" wf_cache="1373414206" wf_entity_id="2" wf_entity_type="node"]</li><li>[wysiwyg_field contenteditable="false" wf_deltas="4" wf_field="field_media" wf_formatter="file_default" wf_cache="1373414206" wf_entity_id="2" wf_entity_type="node"]</li><li>some text</li></ul><p>In this example the wf item in the 3rd list item was added without adding a non breaking space inside the list item first, in this case a &lt;br&gt; tag gets inserted in front of it for some reason.</p>
+nodes[2][body][und][0][format] = wysiwyg_file
+nodes[2][field_media][und][0][fid] = 2
+nodes[2][field_media][und][0][display] = 1
+nodes[2][field_media][und][1][fid] = 3
+nodes[2][field_media][und][1][display] = 1
+nodes[2][field_media][und][2][fid] = 1
+nodes[2][field_media][und][2][display] = 1
+nodes[2][field_media][und][3][fid] = 2
+nodes[2][field_media][und][3][display] = 1
+nodes[2][field_media][und][4][fid] = 3
+nodes[2][field_media][und][4][display] = 1
+
+nodes[3][type] = file_page
+nodes[3][title] = File copy and paste
+nodes[3][uid] = 1
+nodes[3][language] = und
+nodes[3][promote] = 1
+nodes[3][body][und][0][value] = <p>Here is a File based WF item [wysiwyg_field contenteditable="false" wf_deltas="0" wf_field="field_file" wf_formatter="file_default" wf_cache="1373419445" wf_entity_id="3" wf_entity_type="node"]</p><p>Now Im going to copy and paste it here <span class="file"><img alt="" class="file-icon" src="/modules/file/icons/application-pdf.png" title="application/pdf" /> <a href="http://wf.ld/sites/wf.ld/files/files/About-Realityloop.pdf" type="application/pdf; length=673552">About-Realityloop.pdf</a></span></p><p>As you can see in source mode it been converted to html instead of the token</p><p><span class="file">The process used to copy was to click the cursor to the right of the WF item and then arrow left once so that the entire WF item was highlighted, then I click CTRL/CMD+C to copy and CTRL/CMD+V to paste it, though the same happens if you highlight a media item including surrounding text.</span></p>
+nodes[3][body][und][0][format] = wysiwyg_file
+nodes[3][field_file][und][0][fid] = 1
+nodes[3][field_file][und][0][display] = 1
+
+nodes[4][type] = media_page
+nodes[4][title] = Media copy and paste
+nodes[4][uid] = 1
+nodes[4][language] = und
+nodes[4][promote] = 1
+nodes[4][body][und][0][value] = <p>Here is a Media based WF item [wysiwyg_field contenteditable="false" wf_deltas="0" wf_field="field_media" wf_formatter="file_default" wf_cache="1373413963" wf_entity_id="4" wf_entity_type="node"]</p><p>And now I will copy and paste it here <span class="file"><img alt="" class="file-icon" src="/modules/file/icons/application-pdf.png" title="application/pdf" /> <a href="http://wf.ld/sites/wf.ld/files/files/About-Realityloop_0.pdf" type="application/pdf; length=673552">About-Realityloop.pdf</a></span></p><p><span class="file">As you can see it has been converted to html instead of maintaining the token</span></p><p><span class="file">The process used to copy was to click the cursor to the right of the WF item and then arrow left once so that the entire WF item was highlighted, then I click CTRL/CMD+C to copy and CTRL/CMD+V to paste it, though the same happens if you highlight a media item including surrounding text.</span></p>
+nodes[4][body][und][0][format] = wysiwyg_file
+nodes[4][field_media][und][0][fid] = 2
+nodes[4][field_media][und][0][display] = 1
+
+nodes[5][type] = file_page
+nodes[5][title] = File adding media items in a new list item
+nodes[5][uid] = 1
+nodes[5][language] = und
+nodes[5][promote] = 1
+nodes[5][body][und][0][value] = <p>If you add a WF item in a new list below (remember to prefix it with a space) then hit enter to add another list item, and then try to insert a new file in the new list item, The existing file will already be selected in the WF popup indicating that you are still inside the WF token somehow. This only appears to happen with File based WF items, not Media based ones.</p>
+nodes[5][body][und][0][format] = wysiwyg_file
+
+nodes[6][type] = media_page
+nodes[6][title] = Media Hard to delete WF items from a list
+nodes[6][uid] = 1
+nodes[6][language] = und
+nodes[6][promote] = 1
+nodes[6][body][und][0][value] = <p>If you click your cursor at the end of a WF item in the list, and then click again (if the WF icon was highlighted), you need to hit the delete/backspace key lots of times to delete the WF item, if you can at all. It works if the WF icon is highlighted though.</p><ul><li>&nbsp;[wysiwyg_field contenteditable="false" wf_deltas="0" wf_field="field_media" wf_formatter="file_default" wf_cache="1373415201" wf_entity_id="6" wf_entity_type="node"]</li><li>&nbsp;[wysiwyg_field contenteditable="false" wf_deltas="1" wf_field="field_media" wf_formatter="file_default" wf_cache="1373415201" wf_entity_id="6" wf_entity_type="node"]</li></ul>
+nodes[6][body][und][0][format] = wysiwyg_file
+nodes[6][field_media][und][0][fid] = 3
+nodes[6][field_media][und][0][display] = 1
+nodes[6][field_media][und][1][fid] = 1
+nodes[6][field_media][und][1][display] = 1
+
+nodes[7][type] = file_page
+nodes[7][title] = File Hard to delete WF items from a list
+nodes[7][uid] = 1
+nodes[7][language] = und
+nodes[7][promote] = 1
+nodes[7][body][und][0][value] = <p>This is currently untestable due to <a href="/node/5">/node/5</a></p><p>If you click your cursor at the end of a WF item in the list, and then click again (if the WF icon was highlighted), you need to hit the delete/backspace key lots of times to delete the WF item, if you can at all. It works if the WF icon is highlighted though.</p>
+nodes[7][body][und][0][format] = wysiwyg_file
+
+nodes[8][type] = media_page
+nodes[8][title] = Media deleting a Media item that is in use within list messes up list order
+nodes[8][uid] = 1
+nodes[8][language] = und
+nodes[8][promote] = 1
+nodes[8][body][und][0][value] = <p>We&#39;re pretty sure this ia aWYSIWYG issue</p><p>Now open <a href="/admin/content/file">/admin/content/file</a> and delete on of the meida items below, then edit this node and just click save, list chaos ensues.</p><p>Here is a list with just text in it</p><ul><li>List Item 1</li><li>List Item 2</li><li>List Item 3</li></ul><p>Now some more text, followed by a list item with mixed text and Media based WF items</p><ul><li>[wysiwyg_field contenteditable="false" wf_deltas="0" wf_field="field_media" wf_formatter="file_default" wf_cache="1373419802" wf_entity_id="8" wf_entity_type="node"]</li><li>Now some text</li><li>[wysiwyg_field contenteditable="false" wf_deltas="1" wf_field="field_media" wf_formatter="file_default" wf_cache="1373419802" wf_entity_id="8" wf_entity_type="node"]</li><li>A Bit more text</li></ul><p>Now a list with just media items</p><ul><li>[wysiwyg_field contenteditable="false" wf_deltas="2" wf_field="field_media" wf_formatter="file_default" wf_cache="1373419802" wf_entity_id="8" wf_entity_type="node"]</li><li>[wysiwyg_field contenteditable="false" wf_deltas="3" wf_field="field_media" wf_formatter="file_default" wf_cache="1373419802" wf_entity_id="8" wf_entity_type="node"]</li><li>[wysiwyg_field contenteditable="false" wf_deltas="4" wf_field="field_media" wf_formatter="file_default" wf_cache="1373419802" wf_entity_id="8" wf_entity_type="node"]</li><li>[wysiwyg_field contenteditable="false" wf_deltas="5" wf_field="field_media" wf_formatter="file_default" wf_cache="1373419802" wf_entity_id="8" wf_entity_type="node"]</li></ul>
+nodes[8][body][und][0][format] = wysiwyg_file
+nodes[8][field_media][und][0][fid] = 2
+nodes[8][field_media][und][0][display] = 1
+nodes[8][field_media][und][1][fid] = 3
+nodes[8][field_media][und][1][display] = 1
+nodes[8][field_media][und][2][fid] = 1
+nodes[8][field_media][und][2][display] = 1
+nodes[8][field_media][und][3][fid] = 2
+nodes[8][field_media][und][3][display] = 1
+nodes[8][field_media][und][4][fid] = 3
+nodes[8][field_media][und][4][display] = 1
+nodes[8][field_media][und][5][fid] = 1
+nodes[8][field_media][und][5][display] = 1
+nodes[8][field_media][und][6][fid] = 2
+nodes[8][field_media][und][6][display] = 1
+
+nodes[9][type] = file_page
+nodes[9][title] = File adding media items in a new list item
+nodes[9][uid] = 1
+nodes[9][language] = und
+nodes[9][promote] = 1
+nodes[9][body][und][0][value] = <p>If you add a WF item in a new list below (remember to prefix it with a space) then hit enter to add another list item, and then try to insert a new file in the new list item, The existing file will already be selected in the WF popup indicating that you are still inside the WF token somehow. This only appears to happen with File based WF items, not Media based ones.</p>
+nodes[9][body][und][0][format] = wysiwyg_file
