@@ -33,10 +33,6 @@ function wf_issues_wysiwyg_default_profiles() {
           'Indent' => 1,
           'Source' => 1,
         ),
-        'drupal' => array(
-          'wysiwyg_fields_field_file' => 1,
-          'wysiwyg_fields_field_media' => 1,
-        ),
       ),
       'toolbar_loc' => 'top',
       'toolbar_align' => 'left',
