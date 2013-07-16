@@ -58,7 +58,7 @@ projects[views][version] = 3.7
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][version] = 2.2
 ; Add CKEditor 4 support - http://drupal.org/node/1853550#comment-6902136
-projects[wysiwyg][patch][] = http://drupal.org/files/wyiwyg-support_v4_ckeditor-1853550-42.patch
+; projects[wysiwyg][patch][] = http://drupal.org/files/wyiwyg-support_v4_ckeditor-1853550-42.patch
 
 projects[wysiwyg_fields][subdir] = contrib
 projects[wysiwyg_fields][download][type] = git
@@ -68,7 +68,8 @@ projects[wysiwyg_fields][download][revision] = 75b4364922081d90cf2de6172936eafbf
 
 ; Libraries
 libraries[ckeditor][download][type] = get
-libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor 4.0/ckeditor_4.0_full.tar.gz
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.tar.gz
+;http://download.cksource.com/CKEditor/CKEditor/CKEditor 4.0/ckeditor_4.0_full.tar.gz
 
 libraries[famfamfam_silk_icons][download][type] = file
 libraries[famfamfam_silk_icons][download][url] = http://www.famfamfam.com/lab/icons/silk/famfamfam_silk_icons_v013.zip
